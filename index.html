@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- flexbox for entry grid container here-->
+    <div class="entryContainer">
+      <div class="date">Date: <input type="date" id="dateInput" /></div>
+      <div class="time">Time: <input type="time" id="timeInput" /></div>
+      <div class="entry">Entry: <input type="text" id="entryInput" /></div>
+      <!--button here-->
+      <button id="saveButon">Save</button>
+    </div>
+    <!--savedEntry container here-->
+    <div class="savedEntryContainer">
+      <ul class="savedList">
+        <li id="savedDate&Time"></li>
+        <li id="savedEntry"></li>
+      </ul>
+    </div>
+    <!--js script-->
+    <script src="app.js"></script>
+  </body>
+</html>

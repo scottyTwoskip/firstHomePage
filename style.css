@@ -1,0 +1,14 @@
+.entryContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  border-color: black;
+  border-style: inset;
+}
+#saveButton {
+  margin: 10px;
+}
+.savedEntryContainer {
+  border-style: groove;
+  border-color: black;
+}
