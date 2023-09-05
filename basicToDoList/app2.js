@@ -1,6 +1,6 @@
 // This is the to do list app
 //set variables here
-
+//finished at 17:00
 const itemsContainer = document.getElementById('items')
 const itemTemplate = document.getElementById('itemTemplate')
 const addButton = document.getElementById('add')
@@ -21,31 +21,43 @@ function setItems(items) {
 //here we are using it to add an object list item
 function addItem() {
     items.unshift({
-        description : '',
+        description: '',
         completed: false
     })
     setItems(items)
     reFreshList()
 }
 
-function reFreshList(){
-    //TODO: sort items
+function updateItem(item, key, value) {
+    item[key] = value
+    setItems(items)
+    reFreshList()
+}
 
+function reFreshList() {
+    //TODO: sort items
     itemsContainer.innerHTML = ''
 
-    for (const item of items){
+    for (const item of items) {
         const itemElement = itemTemplate.content.cloneNode(true)
         const descriptionInput = itemElement.querySelector('.itemDescription')
         const completedInput = itemElement.querySelector('.itemCompleted')
-        
+
         descriptionInput.value = item.description
-        completedInput.checked = item.description
+        completedInput.checked = item.completed;
+
+        descriptionInput.addEventListener('change', () => {
+            updateItem(item, 'description', descriptionInput.value)
+        })
         itemsContainer.append(itemElement)
+
+        completedInput.addEventListener('change', () => {
+            updateItem(item, 'completed', completedInput.checked)
+        })
     }
 }
 
-//button starts here:
-addButton.addEventListener('click', ()=>{
+addButton.addEventListener('click', () => {
     addItem()
 })
 reFreshList()

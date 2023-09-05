@@ -1,0 +1,19 @@
+#items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: first baseline;
+}
+.itemWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.itemsDescription {
+  width: 350px;
+}
+button {
+  margin: 20px;
+  color: rgb(255, 2, 2);
+}
