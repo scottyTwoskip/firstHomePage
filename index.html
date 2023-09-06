@@ -4,16 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="timeTracker\style.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="basicToDoList\style.css" />
   </head>
   <body>
-    <!-- flexbox for entry grid container here-->
+    <!-- time tracker starts here -->
+    <div class="timerContainer">
+      <div class="time">00:00:00</div>
+      <div class="controls">
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+        <button id="restart">Restart</button>
+      </div>
+    </div>
+    <br />
+    <!-- dates app starts here -->
     <form class="entryContainer">
       <div>Date: <input type="date" id="dateInput" /></div>
       <div>Time: <input type="time" id="timeInput" /></div>
       <div>Entry: <input type="text" id="entryInput" /></div>
-      <!--button here-->
-      <button id="saveButon">Save</button>
+      <button id="saveButton">Save</button>
     </form>
     <!--savedEntry container here-->
     <div class="savedEntryContainer">
@@ -22,7 +33,29 @@
         <li id="savedEntry"></li>
       </ul>
     </div>
-    <!--js script-->
+    <br />
+    <!-- to do list app starts here -->
+    <div id="toDoListContainer">
+      <div id="toDoListTitle">To Do List:</div>
+      <br />
+      <div id="items">
+        <div class="item"></div>
+        <template id="itemTemplate">
+          <div class="itemWrapper">
+            <input type="checkbox" class="itemCompleted" />
+            <input
+              type="text"
+              class="itemDescription"
+              placeholder="Enter new item here. :D"
+            />
+          </div>
+        </template>
+      </div>
+      <button id="add">Add Item</button>
+    </div>
+    <!--js scripts-->
+    <script src="timeTracker\app3.js"></script>
     <script src="app.js"></script>
+    <script src="basicToDoList\app2.js"></script>
   </body>
 </html>

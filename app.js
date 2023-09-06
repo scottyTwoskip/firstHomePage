@@ -75,4 +75,3 @@ function loadAndDisplayData() {
 
 loadAndDisplayData();
 
-// Add event listener to remove buttons after loading data

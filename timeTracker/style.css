@@ -1,5 +1,31 @@
-#start,
-#pause,
-#restart {
-  background-color: brown;
+.time {
+    font-size: 3em; 
+    margin-bottom: 20px; 
+}
+
+#start, #pause, #restart {
+    background-color: brown;
+    font-size: 1.4em;  /* This makes the button font size 70% of the time's font size */
+    padding: 10px 20px;  
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#start:hover, #pause:hover, #restart:hover {
+    background-color: darkred;
+}
+
+.timerContainer {
+    background-color: rgba(79, 79, 79, 0.7);
+    color: white;
+    text-align: center;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
